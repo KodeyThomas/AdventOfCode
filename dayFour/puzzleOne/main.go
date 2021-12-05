@@ -81,11 +81,6 @@ func extractDataFromFile(path string) (bingoNumbers []int, bingoTensor [][][]int
 }
 
 func calculateScoreTensor(bingoNumbers []int, bingoTensor [][][]int) (scoreTensor [][][]int, winningValue int, tensorDepth int) {
-	scoreMatrix := make([][]int, 99)
-	for i := 0; i < 99; i++ {
-		scoreMatrix[i] = make([]int, 1)
-	}
-
 	scoreTensor = createTensor(6, 6, 100)
 
 	row := 0
